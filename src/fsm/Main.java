@@ -35,5 +35,16 @@ public class Main {
         fsm.transitions();
 
         System.out.println(fsm);
+
+        Fsm textBasedFsm = new Fsm("Text based Fsm");
+
+        textBasedFsm.readTxtFile();
+
+        System.out.println("Vul uw letter reeks in:");
+
+        letterReeks = myScanner.nextLine();
+        fsm.setCharacters(letterReeks);
+        textBasedFsm.transitions();
+
     }
 }

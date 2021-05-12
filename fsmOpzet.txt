@@ -1,0 +1,12 @@
+// Nodes
+s0,Nummer 0
+s1,Nummer 1
+s2,Nummer 2
+// Connections
+s0>s2>A
+s0>s1>B
+s1>s1>A
+s1>s2>B
+s2>s3>B
+s3>s3>A
+s3>s0>B

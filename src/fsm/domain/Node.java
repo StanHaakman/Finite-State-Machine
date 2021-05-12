@@ -26,4 +26,8 @@ public class Node {
     public Node getNext(char trigger) {
         return triggerPoints.getOrDefault(trigger, null);
     }
+
+    public void setTriggerPoints(Map<Character, Node> triggerPoints) {
+        this.triggerPoints = triggerPoints;
+    }
 }
