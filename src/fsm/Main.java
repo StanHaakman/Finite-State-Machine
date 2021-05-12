@@ -3,6 +3,8 @@ package fsm;
 import fsm.domain.Fsm;
 import fsm.domain.Node;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -25,7 +27,13 @@ public class Main {
 
         Fsm fsm = new Fsm("Finite State Machine");
         fsm.setFirstNode(s0);
-        fsm.setCharacters("ABAA");
+
+        Scanner myScanner = new Scanner(System.in);
+        System.out.println("Vul uw letter reeks in:");
+
+        String letterReeks = myScanner.nextLine();
+        fsm.setCharacters(letterReeks);
+
         fsm.transitions();
 
         System.out.println(fsm);
