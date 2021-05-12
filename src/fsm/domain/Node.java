@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Node {
     private String name;
-    private Map<Character, Node> triggerPoints = new HashMap<Character, Node>();
+    private Map<Character, Node> triggerPoints = new HashMap<>();
 
     public Node(String name) {
         this.name = name;
@@ -20,13 +20,10 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node [" +
-                "Naam: '" + name + '\'' +
-                ' ' + triggerPoints.keySet() +
-                ']';
+        return "Node [" + name + ']';
     }
 
-    public Node getNext(char test) {
-        return triggerPoints.getOrDefault(test, null);
+    public Node getNext(char trigger) {
+        return triggerPoints.getOrDefault(trigger, null);
     }
 }

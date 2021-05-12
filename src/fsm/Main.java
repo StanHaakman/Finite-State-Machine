@@ -7,8 +7,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-
         Node s0 = new Node("Node nummer 0");
         Node s1 = new Node("Node nummer 1");
         Node s2 = new Node("Node nummer 2");
