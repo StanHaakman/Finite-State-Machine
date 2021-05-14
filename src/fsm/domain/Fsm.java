@@ -2,9 +2,7 @@ package fsm.domain;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.sql.SQLSyntaxErrorException;
 import java.util.*;
-import java.util.regex.PatternSyntaxException;
 
 public class Fsm {
     private String name;
