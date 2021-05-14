@@ -43,8 +43,9 @@ public class Main {
         System.out.println("Vul uw letter reeks in:");
 
         letterReeks = myScanner.nextLine();
-        fsm.setCharacters(letterReeks);
+        textBasedFsm.setCharacters(letterReeks);
         textBasedFsm.transitions();
 
+        System.out.println(textBasedFsm);
     }
 }

@@ -32,7 +32,7 @@ public class Fsm {
             }
             this.previousNodes.add(next);
         }
-    };
+    }
 
     public void readTxtFile() {
         try {
@@ -48,6 +48,7 @@ public class Fsm {
             }
             while (myReader.hasNextLine()) {
                 String textData = myReader.nextLine();
+                boolean startingPoint = false;
 
 //                Check if the next line is empty
                 if (textData.startsWith("//")) {
@@ -55,6 +56,9 @@ public class Fsm {
                 } else if (textData.isBlank()) {
 //                    Empty lines are skipped
                     continue;
+                } else if (textData.startsWith("^^")) {
+                    textData = textData.replaceAll("\\^", "");
+                    startingPoint = true;
                 }
                 String[] nodeValues = textData.split(",");
 //                Check for valid input data
@@ -62,24 +66,25 @@ public class Fsm {
                     System.out.println("Geen juiste syntaxt in het textbestand. Lees nogmaals je readme.md voor de juiste syntax.");
                     System.exit(0);
                 }
-                nodes.put(nodeValues[0], new Node(nodeValues[1]));
+                Node tempNode = new Node(nodeValues[1]);
+                nodes.put(nodeValues[0], tempNode);
+                if (startingPoint) {
+                    this.setFirstNode(tempNode);
+                }
             }
-
-            System.out.println(nodes);
 
             while (myReader.hasNextLine()) {
                 String textData = myReader.nextLine();
-                System.out.println(textData);
 
                 String[] transitionValues = textData.split(">");
                 Node targetNode = nodes.get(transitionValues[0]);
-                System.out.println(transitionValues[2].charAt(0));
                 targetNode.addTriggerPoint(transitionValues[2].charAt(0), nodes.get(transitionValues[1]));
             }
 
-//            Set starting point
-            this.previousNodes.add((Node) nodes.values().toArray()[0]);
-            System.out.println(previousNodes);
+            if (previousNodes.isEmpty()) {
+                this.setFirstNode((Node) nodes.values().toArray()[0]);
+            }
+
         } catch (FileNotFoundException e) {
             System.out.println("File niet gevonden");
         }

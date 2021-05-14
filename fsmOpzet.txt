@@ -1,7 +1,8 @@
 // Nodes
-s0,Nummer 0
+^^s0,Nummer 0
 s1,Nummer 1
 s2,Nummer 2
+s3,Nummer 3
 // Connections
 s0>s2>A
 s0>s1>B
