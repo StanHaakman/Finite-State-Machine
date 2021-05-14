@@ -23,7 +23,7 @@ public class Fsm {
 
     public void transitions () {
         for (char trigger : this.characters.toUpperCase(Locale.ROOT).toCharArray()) {
-            Node current = previousNodes.get(previousNodes.size() - 1);
+            Node current = this.previousNodes.get(this.previousNodes.size() - 1);
             Node next = current.getNext(trigger);
             if (next == null) {
                 break;
@@ -86,7 +86,6 @@ public class Fsm {
         } catch (FileNotFoundException e) {
             System.out.println("File niet gevonden");
         }
-
     }
 
     public List<Node> getPreviousNodes() {
