@@ -34,10 +34,10 @@ public class Fsm {
         }
     }
 
-    public void readTxtFile() {
+    public void readTxtFile(String filename) {
         try {
             Map<String, Node> nodes= new HashMap<>();
-            File myFile = new File("fsmOpzet.txt");
+            File myFile = new File(filename);
             System.out.println(myFile.getName() + " Gebruiken om de Fsm op te zetten");
 
             Scanner myReader = new Scanner(myFile);
@@ -89,6 +89,14 @@ public class Fsm {
             System.out.println("File niet gevonden");
         }
 
+    }
+
+    public List<Node> getPreviousNodes() {
+        return previousNodes;
+    }
+
+    public String getCharacters() {
+        return characters;
     }
 
     @Override

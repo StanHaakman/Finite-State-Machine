@@ -38,7 +38,7 @@ public class Main {
 
         Fsm textBasedFsm = new Fsm("Text based Fsm");
 
-        textBasedFsm.readTxtFile();
+        textBasedFsm.readTxtFile("fsmOpzet.txt");
 
         System.out.println("Vul uw letter reeks in:");
 

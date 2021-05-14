@@ -1,0 +1,4 @@
+// Nodes
+^^firstTestNode,Nummer 0
+// Connections
+firstTestNode>firstTestNode>A
