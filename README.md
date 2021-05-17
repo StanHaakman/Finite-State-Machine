@@ -3,3 +3,6 @@ Finite State Machines zijn de basis voor veel simulaties en AI in bijvoorbeeld g
 
 ## Custom FSM machine
 Voor mijn eigen machine heb ik gekozen voor een alle wegen leiden naar Rome idee. Ik heb een aantal steden gepakt met wegen naar elkaar.
+
+
+![Custom FSM](https://github.com/StanHaakman/Finite-State-Machine/blob/main/CustomFSM.png)
