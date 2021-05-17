@@ -47,5 +47,14 @@ public class Main {
         textBasedFsm.transitions();
 
         System.out.println(textBasedFsm);
+
+        Fsm rome = new Fsm("Rome fsm");
+        rome.readTxtFile("RomeFSM.txt");
+        System.out.println("Vul uw letter reeks in (bestaan uit RGMBV):");
+
+        String romeReeks = myScanner.nextLine();
+        rome.setCharacters(romeReeks);
+        rome.transitions();
+        System.out.println(rome);
     }
 }

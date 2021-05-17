@@ -1,0 +1,21 @@
+// Nodes
+^^rome,Rome
+genua,Genua
+milaan,Milaan
+bologna,Bologna
+venetie,Venetie
+// Connections
+rome>rome>H
+rome>genua>G
+rome>bologna>B
+genua>rome>R
+genua>milaan>M
+milaan>rome>R
+milaan>genua>G
+milaan>bologna>B
+milaan>milaan>H
+bologna>rome>R
+bologna>milaan>M
+bologna>venetie>V
+venetie>rome>R
+venetie>bologna>B
